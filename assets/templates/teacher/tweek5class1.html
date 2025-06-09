@@ -1,0 +1,30 @@
+{%extends 'Teacherbase.html'%}
+{%load static%}
+{%block contents%}
+
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div class="featured_box">
+        <h2></h2>
+        <p>
+           week-5 classes:
+        </p>
+        <p><h2>Upload file</h2>
+
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+        <center><br><br>
+            {{form.as_p}}
+            <button type="submit" >Save</button>
+        </center>
+</form></p>
+      <div class="floater">
+        <h2></h2>
+        <p></p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,35 @@
+{%extends 'studentbase.html'%}
+{%load static%}
+{%block contents%}
+
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div class="featured_box">
+
+        <p>
+           submit your answer-here:
+        </p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <form action="/class2solution5/" method="POST">
+ {% csrf_token %}
+            <tr><td style="color:Black">WEEK</td><td >{{form.week}}</td></tr>
+                                            <tr><td style="color:Black">EMAIL</td><td >{{form.email}}</td></tr>
+
+                                          <tr><td style="color:Black">TASK</td><td >{{form.task}}</td></tr>
+                                            <tr><td style="color:Black">SOLUTION</td><td >{{form.solution}}</td></tr><br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="submit" value="submit">
+
+                                </form>
+      <div class="floater">
+        <h2></h2>
+        <p></p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{%endblock%}

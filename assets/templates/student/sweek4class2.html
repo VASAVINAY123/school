@@ -1,0 +1,41 @@
+{%extends 'studentbase.html'%}
+{%load static%}
+{%block contents%}
+
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div class="featured_box">
+        <h2></h2>
+        <p>
+             <h2>View task </h2>
+    <table border="2px">
+            <tr>
+                <th>S.No</th>
+                <th >Topic</th>
+                <th>Task</th>
+                <th>Practise</th>
+                <th>view Answer</th>
+
+            </tr>
+            {% for i in object %}
+            <tr>
+            <td style="color:brown">{{i.id}}</td>
+            <td style="color:darkolivegreen">{{i.topic}}</td>
+            <td style="color:brown">{{i.task}}</td>
+            <td style="color:brown">{{i.task}}<a href="{%url 'class2solution4'%}">practise-1</a></td>
+            <td style="color:brown"><a href="{{i.file.url }}" class="btn btn-primary btn-sm" target="_blank">Download</a></td>
+            </tr>
+            {% endfor %}
+
+    </table>
+        </p>
+      <div class="floater">
+        <h2></h2>
+        <p></p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{%endblock%}

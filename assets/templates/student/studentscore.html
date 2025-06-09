@@ -1,0 +1,45 @@
+{%extends 'studentbase.html'%}
+{%load static%}
+{%block contents%}
+
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div class="featured_box">
+        <h2></h2>
+        <p>
+        <table><tr>
+        <th>S.No</th>
+                <th >Week</th>
+                <th>Email</th>
+                <th>Topic</th>
+                <th>Solutions</th>
+                <th>Marks</th>
+
+            </tr>
+            {% for i in object %}
+
+            <tr>
+           <td style="color:brown">{{i.id}}</td>
+            <td style="color:darkolivegreen"><input type="text" name="week" value="{{i.week}}" readonly> </td>
+            <td style="color:brown"><input type="text" name="email" value="{{i.email}}" readonly></td>
+            <td style="color:brown"><input type="text" name="task" value="{{i.task}}" readonly></td>
+            <td style="color:brown"><input type="text" name="solution" value="{{i.solution}}" readonly></td>
+<!--            <td style="color:brown">{{i.week}}<a href="{%url 'class2solution1'%}">Marks</a></td>-->
+                <td style="color:brown"><input type="number" name="n1" value="{{i.marks}}" readonly>
+            </tr>
+
+        </p>
+         {% endfor %}
+
+    </table>
+
+      <div class="floater">
+        <h2></h2>
+        <p></p>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{%endblock%}
